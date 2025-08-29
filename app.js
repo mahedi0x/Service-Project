@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 //=============================   Copy Button Functionality ================
 document.querySelectorAll(".copy-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -26,3 +25,46 @@ document.querySelectorAll(".copy-btn").forEach((btn) => {
   });
 });
 
+
+const callHistoryList = document.getElementById("call-history-list");
+const clearHistoryBtn = document.getElementById("clearHistoryBtn");
+
+const coinDisplay = document.getElementById("coin-count");
+let coins = parseInt(coinDisplay.textContent, 10);
+
+function updateCoins() {
+  coinDisplay.textContent = coins;
+}
+
+function makeCall(serviceName, serviceNumber) {
+  if (coins < 20) {
+    alert("❌ আপনার পর্যাপ্ত কয়েন নেই, কল করতে ন্যূনতম ২০ কয়েন লাগবে!");
+    return;
+  }
+  coins -= 20;
+  updateCoins();
+
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  alert(`📞 Calling number... ${serviceName} (${serviceNumber}) `);
+
+  const li = document.createElement("li");
+  li.className = "flex justify-between items-center bg-white p-2 rounded shadow";
+  li.innerHTML = `
+    <div>
+      <span class="font-semibold block"> ${serviceName}</span>
+      <span class="text-gray-500 block">${serviceNumber}</span>
+    </div>
+    <span class="text-gray-400 text-xs">${timeString}</span>
+  `;
+  callHistoryList.appendChild(li);
+}
+
+document.querySelectorAll(".call-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".card");
+    const serviceName = card.querySelector("h3").innerText;
+    const serviceNumber = card.querySelector(".text-3xl").innerText;
+    makeCall(serviceName, serviceNumber);
+  });
+});
