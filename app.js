@@ -26,9 +26,10 @@ document.querySelectorAll(".copy-btn").forEach((btn) => {
 });
 
 
-const callHistoryList = document.getElementById("call-history-list");
-const clearHistoryBtn = document.getElementById("clearHistoryBtn");
 
+//============================= Coin and Call History Functionality ================
+
+const callHistoryList = document.getElementById("call-history-list");
 const coinDisplay = document.getElementById("coin-count");
 let coins = parseInt(coinDisplay.textContent, 10);
 
@@ -38,7 +39,9 @@ function updateCoins() {
 
 function makeCall(serviceName, serviceNumber) {
   if (coins < 20) {
-    alert("❌ আপনার পর্যাপ্ত কয়েন নেই, কল করতে ন্যূনতম ২০ কয়েন লাগবে!");
+    alert(`দুঃখিত, আপনার পর্যাপ্ত কয়েন নেই ❌, 
+কল করতে ন্যূনতম ২০ কয়েন লাগবে! 💰
+ধন্যবাদ !`);
     return;
   }
   coins -= 20;
@@ -67,4 +70,15 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
     const serviceNumber = card.querySelector(".text-3xl").innerText;
     makeCall(serviceName, serviceNumber);
   });
+});
+
+
+// =========================History List Clear Functionality==========
+const clearBtn = document.getElementById('clear-history-btn');
+const CallList = document.getElementById('call-history-list');
+
+clearBtn.addEventListener('click', function(){
+   
+    CallList.innerHTML = " ";
+
 });

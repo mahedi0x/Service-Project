@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Service</title>
+    <title>জরুরি সেবা</title>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <!-- Icon  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" ntegrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-</head>
-<body class="bg-gray-100">
 
+    <style>
+        /* ------------------->Google fonts cdn <--------------------- */
+       @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+      .font-hind-Madurai{
+            font-family: "Hind Madurai", sans-serif;
+        }
+      .font-roboto{
+           font-family: "Roboto", sans-serif;
+       }
+    </style>
+
+</head>
+
+
+<body class="bg-gray-100">
     <!-- Header Section -->
     <header>
     <!-- navbar section -->
-       <section class="navbar flex items-center justify-between bg-base-100 shadow-sm lg:px-10 p-3">
+       <section class="fixed z-50 navbar flex items-center justify-between bg-gray-100 shadow-sm lg:px-10 p-3">
         <div class="flex items-center justify-center px-1">
             <img class="w-[50px] h-[50px]" src="assets/logo.png" alt="">
-            <p class="mx-3 lg:mx-5 lg:font-bold">Emergency Service</p>
+            <p class="mx-3 lg:mx-5 lg:font-bold lg:text-2xl font-hind-Madurai">Emergency Service</p>
         </div>
         <div class="flex-none">
             <ul class="flex items-center justify-between gap-1 lg:gap-4">
@@ -34,11 +47,11 @@
        </section>
 
     <!-- banner section -->
-       <section>
-        <div class="bg-gradient-to-r from-green-900 via-green-700 to-green-900">
+       <section class="pt-24">
+        <div class="bg-gradient-to-r from-green-900 via-green-700 to-green-900 py-5">
             <div class="flex flex-col justify-center items-center p-9 text-white">
               <img class="w-[92px] h-[92px] photo" src="./assets/logo.png" alt=""/>
-              <h1 class="text-4xl lg:text-6xl font-bold title">জরুরি সেবা ডিরেক্টরি</h1>
+              <h1 class="text-4xl lg:text-5xl font-bold mt-6">জরুরি সেবা ডিরেক্টরি</h1>
               <p class="py-3 font-semibold">
                 Government Emergency Services at Your Fingertip – A Project by
                 Government of the People’s Republic of Bangladesh
@@ -49,22 +62,20 @@
     </header>
 
     <!-- Card Container -->
-    <main class="Container flex flex-col md:flex-row max-w-[1440px] mx-auto p-8 mt-10">
-
-
-
+    <main class="Container flex flex-col md:flex-row max-w-[1440px] mx-auto p-8 mt-10 font-roboto">
 
         <!-- Card Section -->
         <div class="lg:w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 mx-5 mb-10">
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/emergency.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
+                     
                 </div>
                 <h3 class="text-lg font-bold ">জাতীয় জরুরি সেবা</h3>
                 <p class="text-sm text-gray-500 mb-3">National Emergency</p>
                 <p class="text-3xl font-bold text-gray-900">999</p>
-                <span class="rounded-2xl text-gray-400 bg-gray-200 w-[100px] px-1 my-2 text-center ">সার্বজনীন</span>
+                <span class="rounded text-gray-400 bg-gray-200 w-[100px] px-1 my-2 text-center ">সার্বজনীন</span>
 
                 <div class="mt-6 flex space-x-3">
                     <button class="copy-btn flex-1 bg-gray-100 text-gray-700 font-semibold py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm flex items-center justify-center">
@@ -78,8 +89,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/police.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">পুলিশ</h3>
                 <p class="text-sm text-gray-500 mb-3">Police</p>
@@ -99,8 +110,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/fire-service.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">ফায়ার সার্ভিস</h3>
                 <p class="text-sm text-gray-500 mb-3">Fire Service</p>
@@ -121,8 +132,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/ambulance.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">অ্যাম্বুলেন্স</h3>
                 <p class="text-sm text-gray-500 mb-3">Ambulance</p>
@@ -141,8 +152,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/emergency.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">নারী ও শিশু সহায়তা</h3>
                 <p class="text-sm text-gray-500 mb-3">Women & Child Helpline</p>
@@ -161,8 +172,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/emergency.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">দুদক</h3>
                 <p class="text-sm text-gray-500 mb-3">Anti-Corruption</p>
@@ -181,8 +192,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/emergency.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">বিদ্যুৎ বিভ্রাট</h3>
                 <p class="text-sm text-gray-500 mb-3">Electricity Outage</p>
@@ -201,8 +212,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-200 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/brac.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">ব্র্যাক</h3>
                 <p class="text-sm text-gray-500 mb-3">Brac</p>
@@ -221,8 +232,8 @@
 
             <div class="card w-86 bg-base-100 shadow-sm p-5">
                 <div class="flex items-center justify-between my-3">
-                    <img class="bg-red-300 w-[50px] h-[50px] p-3 rounded-2xl" src="assets/emergency.png" alt="">
-                     <span><i class="fa-regular hover:text-red-700 cursor-pointer  fa-heart"></i></span>
+                    <img class="bg-red-100 w-[50px] h-[50px] p-1 rounded-2xl" src="assets/Bangladesh-Railway.png" alt="">
+                    <span><i class="fa-solid text-gray-500 hover:text-red-700 cursor-pointer text-2xl fa-heart"></i></span>
                 </div>
                 <h3 class="text-lg font-bold ">বাংলাদেশ রেলওয়ে</h3>
                 <p class="text-sm text-gray-500 mb-3">Bangladesh Railway</p>
@@ -238,28 +249,22 @@
                     </button>
                 </div>
             </div>
-
-            
-
         </div>
 
+
         <!-- Call History -->
-        <div class="container card w-86 bg-base-100 card-xs shadow-sm p-5 h-[970px] lg:w-106 ">
+        <div class="container card w-86 bg-base-100 card-xs shadow-sm p-5 max-h-screen lg:w-106 ">
             <div class="grid grid-cols-2 items-center mb-8">
                 <h2 class="font-bold"><i class="fa-regular fa-clock"></i> Call History</h2>
-                <button id="clear-history" class="btn bg-green-600 hover:bg-orange-600 rounded-lg ms-4  flex-1 flex items-center justify-center text-white ">Clear</button>
+                <button id="clear-history-btn" class="btn bg-red-500 hover:bg-orange-600 rounded-lg ms-4  flex-1 flex items-center justify-center text-white "> <i class="fa-solid fa-trash-can"></i> Clear</button>
             </div>
 
-            <div id="call-history-list" class="space-y-2"></div>
+            <div id="call-history-list" class="space-y-2">
 
+            </div>
         </div>
     </main>
 
     <script src="/app.js"></script>
-
-
-
-
-
 </body>
 </html>
